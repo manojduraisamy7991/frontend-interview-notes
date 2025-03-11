@@ -7,22 +7,19 @@ const useFetch = (url) => {
 
   const fetchData = async (url) => {
     setLoading(true);
-
     try {
       const response = await fetch(url);
-      response
-        .json()
-        .then((res) => {
-          return res;
-        })
-        .then((result) => {
-          setData(result);
-          setLoading(false);
-        });
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const data = await response.json();
+      setData(data);
     } catch (error) {
       setError(error.message);
+    } finally {
       setLoading(false);
     }
+   
   };
 
   useEffect(() => {
