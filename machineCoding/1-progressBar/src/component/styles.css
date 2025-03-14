@@ -1,0 +1,13 @@
+.Progress-main-container {
+  background-color: lightgray;
+  border: 5px solid lightgray;
+  transition: border-width 0.3s ease-in-out;
+  height: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+.Progress-bar {
+  background-color: green;
+  height: 20px;
+  border-radius: 5px;
+}
