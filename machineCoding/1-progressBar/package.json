@@ -1,7 +1,7 @@
 {
-  "name": "react",
+  "name": "progressBar",
   "version": "1.0.0",
-  "description": "",
+  "description": "progressBar",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
